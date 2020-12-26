@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<style>
+	body{
+		background-color: pink;
+	}
+
+.heart {
+  position: absolute;
+  margin: auto;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  animation-name: heartanimation;
+  animation-duration: 1.5s;
+
+  }
+
+  .heart:after {
+  background-color: red;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+
+
+}
+.heart:before {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+
+}
+.heart:hover{
+	animation-name: greeen;
+	animation-duration: 0.25s;
+	animation-fill-mode:forwards;
+	
+}
+.heart:hover:before{
+	animation-name: greeen;
+	animation-duration: 0.25s;
+	animation-fill-mode:forwards;
+}
+.heart:hover:after{
+	animation-name: greeen;
+	animation-duration: 0.25s;
+	animation-fill-mode:forwards;
+}
+@keyframes greeen{
+	100%{
+		background-color: #660000;
+	}
+}
+@keyframes heartanimation{
+	0%{
+		transform: scale(1) rotate(-45deg);
+	}
+	25%{
+		transform: scale(1.5) rotate(-45deg);
+	}
+
+	50%{
+		transform: scale(1) rotate(-45deg);
+	}
+	
+	75%{
+		transform: scale(1.25) rotate(-45deg);
+	}
+	
+	100%{
+		transform: scale(1) rotate(-45deg);
+	}
+	
+}
+</style>
+
+<html>
+<body>
+<a href="https://google.com" target="plank">
+<div class="heart"></div>
+</a>
+</body>
+</html>
